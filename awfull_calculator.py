@@ -2,11 +2,10 @@
 import sys
 
 def calculator():
-  while True:
     print("Welcome to the world's worst calculator: only acepts 2 numbers:\n")
     print("Write CLOSE to close.")
     n1 = input("Insert number:  ")
-    if n1 == "c" or n1 == "CLOSE" or "close":
+    if n1 == "c" or n1 == "CLOSE" or n1 == "close":
       exit()
     oper = input("Insert operation symbol:  ")
     n2 = input("Insert number:  ")
@@ -23,11 +22,14 @@ def calculator():
       total = int(n1)/int(n2)
     else:
       print("Something is wrong...")
-    return print(total)
+    return print("TOTAL: {}\n".format(total))
     
 def main():
-  #call the function and make it in a loop
-  calculator()
+  while True:
+    #call the function and make it in a loop
+    calculator()
+    print("\n ------------ \n")
+
     
 if __name__ == "__main__":
   main()
